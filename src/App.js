@@ -22,7 +22,6 @@ class QuoteBox extends React.Component {
       author: '',
     }
     this.generateQuotes = this.generateQuotes.bind(this)
-    this.generateQuotes()
   }
 
   generateQuotes(){
@@ -32,6 +31,11 @@ class QuoteBox extends React.Component {
       author: quotesList[x].author,
       copied: false
     })
+    let r = Math.floor((Math.random())*100)+10
+    let g = Math.floor((Math.random())*100)+10
+    let b = Math.floor((Math.random())*100)+10
+    document.getElementById("quote-box-container").style.backgroundColor = "rgb("+r+","+g+","+b+")";
+    document.getElementById("quote-box-container").style.color = `rgb(${r + 170},${g + 170},${b + 170})`; //String Template is Cool
   }
 
   componentDidMount(){
@@ -49,7 +53,9 @@ class QuoteBox extends React.Component {
         </div>
         <div id="buttons-container">
           <TwitShare {...this.state}/>
-          <button onClick={() => {navigator.clipboard.writeText(this.state.quote+" -"+this.state.author); this.setState({copied:true})}}>
+          <button onClick={() => {navigator.clipboard.writeText(this.state.quote+" -"+this.state.author);
+           this.setState({copied:true});
+           }}>
             Copy to Clipboard
           </button>
           {this.state.copied &&
