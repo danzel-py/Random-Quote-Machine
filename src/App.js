@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 function App() {
@@ -40,19 +40,14 @@ class QuoteBox extends React.Component {
   render(){
     return(
       <div>
-        <div id="text">
+        <div id="text" class="text-quote">
           {this.state.quote}
         </div>
         <div id="author">
           -{this.state.author}
         </div>
         <div id="buttons-container">
-          <a id="tweet-quote" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            logotwittard
-          </a>
-          <a id ="fb-share" href="https://www.fb.com" target="_blank" rel="noopener noreferrer">
-            logofb
-          </a>
+          <TwitShare {...this.state}/>
           <button id="new-quote" onClick={this.generateQuotes}>
             New Quote
           </button>
@@ -62,6 +57,36 @@ class QuoteBox extends React.Component {
     )
   }
 }
+
+class TwitShare extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {}
+    this.gantiSpace = this.gantiSpace.bind(this)
+  }
+
+  gantiSpace(sumthin){
+    let quoteToDo = this.props[sumthin]
+    let quoteDone = quoteToDo.replace(/ /g,'%20')
+    return quoteDone
+  }
+
+  render(){
+    return(
+      <div>
+        <a id="tweet-quote" 
+          href={"https://www.twitter.com/intent/tweet?hashtags=RandomQuotes&text=\""+this.gantiSpace('quote')+"\".%10-"+this.gantiSpace('author')+"&tw_p=tweetbutton&via=pegasimp"} 
+          target="_blank" rel="noopener noreferrer"
+          >
+          Tweet
+        </a>
+      </div>
+    )
+  }
+}
+
+
+
 
 const quotesList = [
   {
