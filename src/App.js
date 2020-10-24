@@ -5,87 +5,78 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <QuoteBox id="quote-box" />
+        <div id='quote-box-container'>
+          <QuoteBox />
+        </div>
       </header>
     </div>
   );
 }
 
 
-const QuoteBox = () => {
-    return(
-      <div id="boxbuatquoteauth">
-        <QuotesAndAuthor quotesnya='' author='' />
-        <Navbwh />
-      </div>
-    )  
-}
-
-const QuotesAndAuthor = (props) =>{
-    return(
-      <div>
-        <div id="quote-text">
-          {props.quotesnya}
-        </div>
-        <div id="author">
-          {props.author}
-        </div>
-        
-      </div>
-    )
-  }
-
-function Navbwh() {
-  return (
-    <div id='navbwh'>
-      <div>
-        <a href="https:\\www.twitter.com" id="tweet-quote">logo tweet</a>
-      </div>
-      <div>
-        <a href="https:\\www.fb.com" id="fb-quote">logo fb</a>
-      </div>
-      <NewQuote />
-    </div>
-  );
-
-}
-
-class NewQuote extends React.Component {
+class QuoteBox extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      quotes: '',
-      auth: ''
+      quote: '',
+      author: '',
     }
-    this.generateRandomQuote = this.generateRandomQuote.bind(this)
+    this.generateQuotes = this.generateQuotes.bind(this)
+    this.generateQuotes()
   }
 
-  generateRandomQuote(){
-    let x = getRandomNumber(1)
-    this.setState({quotes: quotesList[x].text, auth: quotesList[x].author})
+  generateQuotes(){
+    let x = Math.floor((Math.random())*3)
+    this.setState({
+      quote: quotesList[x].quotes,
+      author: quotesList[x].author
+    })
   }
-  
 
+  componentDidMount(){
+    this.generateQuotes()
+  }
 
   render(){
     return(
       <div>
-        <button onClick={this.generateRandomQuote}>New Quote</button>
-        <p>{this.state.quotes}-{this.state.auth}</p>
+        <div id="text">
+          {this.state.quote}
+        </div>
+        <div id="author">
+          -{this.state.author}
+        </div>
+        <div id="buttons-container">
+          <a id="tweet-quote" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            logotwittard
+          </a>
+          <a id ="fb-share" href="https://www.fb.com" target="_blank" rel="noopener noreferrer">
+            logofb
+          </a>
+          <button id="new-quote" onClick={this.generateQuotes}>
+            New Quote
+          </button>
+
+        </div>
       </div>
     )
   }
 }
 
-const getRandomNumber = (numbers) => {
-  return Math.floor(Math.random()*numbers)
-}
-
 const quotesList = [
   {
-    text: 'Queen Elsa, make a prince. A fancy one.',
-    author: 'Anna'
+    quotes: 'Quotes yg pertama, gtw apa',
+    author: 'Saya'
+  },
+  {
+    quotes: 'Mari mengerjakan sesuatu',
+    author: 'Saya'
+  },
+  {
+    quotes: 'Jangan lupa minum air putih',
+    author: 'Saya'
   }
+
 ]
 
 export default App;
