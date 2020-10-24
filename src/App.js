@@ -1,13 +1,9 @@
 import React from 'react';
 import './App.css';
 
-
 const defaultStyle = {
   transition: "all 100ms ease-in-out",
-  opacity: 1,
 }
-
-
 
 function App() {
   return (
@@ -20,7 +16,6 @@ function App() {
     </div>
   );
 }
-
 
 class QuoteBox extends React.Component {
   constructor(props){
@@ -112,9 +107,6 @@ class TwitShare extends React.Component {
     )
   }
 }
-
-
-
 
 const quotesList = [
   {
@@ -316,9 +308,7 @@ const quotesList = [
   {
     quotes: "People in their handling of affairs often fail when they are about to succeed. If one remains as careful at the end as he was at the beginning, there will be no failure.",
     author: "Lao Tzu"
-  },
-  
-
+  }
 ]
 
 export default App;

@@ -7,3 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 My First React.js project was full of mistakes. I decided i had to startover because i didn't plan anything (as i had always do). Lesson learnt: don't code without planning, especially in building Apps.
 
 Also i've been committing changes directly to master branch, probably if this was a real project i had to create new repo instead of deleting codes. But this is just a practice so i guess i'll keep on doing this here, as well as keeping journal to read maybe 10 years later to be nostalgic about. :v
+
+<h3>Oct 24th, 2020</h3>
+
+I begin fresh and did the thing but the code looks messy. Spent around 8 hours just to make this is probably too slow, but with practice i'll gradually improve on speed and getting better understanding. 
+
+What's left to do is designing the buttons, maybe I'll do it tomorrow after homework.
+
+A noob question: can i place the 200 lines of quotes list elsewhere? ok time to sleep i'll find out tomorrow.
