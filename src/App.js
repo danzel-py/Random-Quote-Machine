@@ -29,7 +29,8 @@ class QuoteBox extends React.Component {
     let x = Math.floor((Math.random())*3)
     this.setState({
       quote: quotesList[x].quotes,
-      author: quotesList[x].author
+      author: quotesList[x].author,
+      copied: false
     })
   }
 
@@ -48,6 +49,15 @@ class QuoteBox extends React.Component {
         </div>
         <div id="buttons-container">
           <TwitShare {...this.state}/>
+          <button onClick={() => {navigator.clipboard.writeText(this.state.quote); this.setState({copied:true})}}>
+            Copy to Clipboard
+          </button>
+          {this.state.copied &&
+            <div>
+              Copied To Clipboard!
+            </div>
+          }
+          
           <button id="new-quote" onClick={this.generateQuotes}>
             New Quote
           </button>
