@@ -8,7 +8,7 @@ const defaultStyle = {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" id="app-body">
         <div id='quote-box-container'>
           <QuoteBox />
         </div>
@@ -39,6 +39,8 @@ class QuoteBox extends React.Component {
     let b = Math.floor((Math.random())*100)+10
     document.getElementById("quote-box-container").style.backgroundColor = "rgb("+r+","+g+","+b+")";
     document.getElementById("quote-box-container").style.color = `rgb(${r + 170},${g + 170},${b + 170})`; //String Template is Cool
+    document.getElementById("app-body").style.backgroundColor = `rgb(${r + 100},${g + 100},${b + 100})`;
+
   }
 
   componentDidMount(){
