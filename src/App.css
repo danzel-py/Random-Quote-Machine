@@ -24,18 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 #quote-box-container {
   padding: 40px 30px 30px 30px;
@@ -45,6 +33,7 @@
   border-radius: 10px;
   height: auto;
   color: white;
+  transition: all 2s
 
 }
 

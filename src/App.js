@@ -1,6 +1,14 @@
 import React from 'react';
 import './App.css';
 
+
+const defaultStyle = {
+  transition: "all 100ms ease-in-out",
+  opacity: 1,
+}
+
+
+
 function App() {
   return (
     <div className="App">
@@ -25,7 +33,7 @@ class QuoteBox extends React.Component {
   }
 
   generateQuotes(){
-    let x = Math.floor((Math.random())*50)
+    let x = Math.floor((Math.random())*quotesList.length)
     this.setState({
       quote: quotesList[x].quotes,
       author: quotesList[x].author,
@@ -39,7 +47,7 @@ class QuoteBox extends React.Component {
   }
 
   componentDidMount(){
-    this.generateQuotes()
+    this.generateQuotes();
   }
 
   render(){
