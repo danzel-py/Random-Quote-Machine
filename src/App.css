@@ -22,7 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  transition: all 0.6s
+  transition: all 2s
 }
 
 
@@ -34,7 +34,7 @@
   border-radius: 10px;
   height: auto;
   color: white;
-  transition: all 2s
+  transition: all 0.6s
 
 }
 
@@ -49,5 +49,29 @@
 }
 
 #buttons-container{
-  margin: 20px 5px 5px 5px
+  margin: 20px 5px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+}
+
+.tombol{
+  font-size: smaller      !important;
+  color: "amber"          !important;
+  text-decoration: none !important;
+  padding: 0.5em 1em !important;
+  border: 0px !important;
+  border-radius: 5px;
+  background-color: rgb(0,0,0,0.2);
+  margin: 0px;
+}
+
+#new-quote{
+  margin-left: 2px;
+}
+
+#sauce{
+  color: white;
+  font-size: 0.5em;
+  text-decoration: none;
 }

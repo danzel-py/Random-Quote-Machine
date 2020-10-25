@@ -15,3 +15,9 @@ I begin fresh and did the thing but the code looks messy. Spent around 8 hours j
 What's left to do is designing the buttons, maybe I'll do it tomorrow after homework.
 
 A noob question: can i place the 200 lines of quotes list elsewhere? ok time to sleep i'll find out tomorrow.
+
+<h3>Oct 25th, 2020</h3>
+
+It looks kinda fancy now. Button and the "<a>attribute</a>" hasn't properly aligned and i still don't know how to align them. Next is to align them and add hover effects maybe.
+
+A noob answer for my noob question: you can't place them somewhere else (i'm probably wrong).
