@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { useMediaQuery } from 'react-responsive'
+
 
 const defaultStyle = {
   transition: "all 100ms ease-in-out",
@@ -9,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" id="app-body">
-        <div id="title">Random aasasas Machine</div>
-        <div id="byMe">by <a id="myName" href="https://www.linkedin.com/in/danzel-artamadja-273457197/">danzel-py</a></div>
+        <div id="title">Random Quote Machine</div>
+        <p id="byMe">by <a id="myName" href="https://www.linkedin.com/in/danzel-artamadja-273457197/">danzel-py</a></p>
         <div id='quote-box-container'>
           <QuoteBox />
         </div>
@@ -28,6 +30,9 @@ class QuoteBox extends React.Component {
     }
     this.generateQuotes = this.generateQuotes.bind(this)
   }
+
+  
+  
 
   generateQuotes(){
     let x = Math.floor((Math.random())*quotesList.length)
@@ -47,7 +52,7 @@ class QuoteBox extends React.Component {
     for(let i=0; i<buttonList.length; i+=1){
       buttonList[i].style.backgroundColor = `rgb(${b + 100},${r + 100},${100})`;
       buttonList[i].style.color = `rgb(${r},${g},${b})`
-    }
+    }  
   }
 
   componentDidMount(){
@@ -89,6 +94,7 @@ class QuoteBox extends React.Component {
     )
   }
 }
+ 
 
 class TwitShare extends React.Component {
   constructor(props){
