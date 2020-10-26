@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" id="app-body">
-        <div id="title">Random Quote Machine</div>
+        <div id="title">Random aasasas Machine</div>
         <div id="byMe">by <a id="myName" href="https://www.linkedin.com/in/danzel-artamadja-273457197/">danzel-py</a></div>
         <div id='quote-box-container'>
           <QuoteBox />
