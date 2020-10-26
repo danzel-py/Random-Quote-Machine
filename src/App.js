@@ -9,6 +9,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" id="app-body">
+        <div id="title">Random Quote Machine</div>
+        <div id="byMe">by <a id="myName" href="https://www.linkedin.com/in/danzel-artamadja-273457197/">danzel-py</a></div>
         <div id='quote-box-container'>
           <QuoteBox />
         </div>
@@ -40,6 +42,7 @@ class QuoteBox extends React.Component {
     document.getElementById("quote-box-container").style.backgroundColor = "rgb("+r+","+g+","+b+")";
     document.getElementById("quote-box-container").style.color = `rgb(${r + 170},${g + 170},${b + 170})`; //String Template is Cool
     document.getElementById("app-body").style.backgroundColor = `rgb(${r + 100},${g + 100},${b + 100})`;
+    document.getElementById("myName").style.color = `rgb(${g},${b},${r})`;
     let buttonList = document.getElementsByClassName("tombol")
     for(let i=0; i<buttonList.length; i+=1){
       buttonList[i].style.backgroundColor = `rgb(${b + 100},${r + 100},${100})`;
@@ -72,13 +75,13 @@ class QuoteBox extends React.Component {
             <button className="tombol" id="new-quote" onClick={this.generateQuotes}>
               New Quote
             </button>
-            </div>
+          </div>
         </div>
           <a id="sauce" href="https://www.inc.com/wanda-thibodeaux/50-quotes-from-ancient-philosophers-that-are-business-relevant-1000s-of-years-la.html" target="_blank" rel="noreferrer noopener">
             Source
           </a>
           {this.state.copied &&
-            <div>
+            <div id="copied-massage">
               Copied To Clipboard!
             </div>
           }
@@ -102,14 +105,12 @@ class TwitShare extends React.Component {
 
   render(){
     return(
-      <div>
-        <a id="tweet-quote" className="tombol" 
+        <a id="tweet-quote" className="tombol"
           href={"https://www.twitter.com/intent/tweet?hashtags=RandomQuotes&text=\""+this.gantiSpace('quote')+"\".%10-"+this.gantiSpace('author')+"&tw_p=tweetbutton&via=pegasimp"} 
           target="_blank" rel="noopener noreferrer"
           >
           Tweet
         </a>
-      </div>
     )
   }
 }

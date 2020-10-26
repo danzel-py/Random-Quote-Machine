@@ -75,3 +75,23 @@
   font-size: 0.5em;
   text-decoration: none;
 }
+
+#copied-massage{
+  font-size: small
+}
+
+#title{
+  font-size:2em;
+  margin-bottom:0.2em
+}
+
+#byMe{
+  font-size:1em;
+  margin-bottom:0.7em;
+  color: rgb(0, 0, 0)
+}
+
+#myName{
+  text-decoration: none;
+  transition: all 2s;
+}
