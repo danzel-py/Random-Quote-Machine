@@ -21,3 +21,9 @@ A noob question: can i place the 200 lines of quotes list elsewhere? ok time to 
 It looks kinda fancy now. Button and the "<a>attribute</a>" hasn't properly aligned and i still don't know how to align them. Next is to align them and add hover effects maybe.
 
 A noob answer for my noob question: you can't place them somewhere else (i'm probably wrong).
+
+<h3>Oct 26th, 2020</h3>
+
+Bye to this project.
+
+Turns out you can place quotesList somewhere else and it's very easy.

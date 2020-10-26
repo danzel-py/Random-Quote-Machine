@@ -1,4 +1,4 @@
-const tes = [
+const quotesList = [
     {
       quotes: 'Pleasure in the job puts perfection in the work.',
       author: 'Aristotle'
@@ -201,3 +201,5 @@ const tes = [
     }
   ]
   
+const _quotesList = quotesList
+export { _quotesList as quotesList }
