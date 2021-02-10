@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 
-const defaultStyle = {
-  transition: "all 100ms ease-in-out",
-}
+
 
 const quotesList = require('./quotesAll.js').quotesList;
 
@@ -101,8 +99,8 @@ class TwitShare extends React.Component {
     this.gantiSpace = this.gantiSpace.bind(this)
   }
 
-  gantiSpace(sumthin){
-    let quoteToDo = this.props[sumthin]
+  gantiSpace(text){
+    let quoteToDo = this.props[text]
     let quoteDone = quoteToDo.replace(/ /g,'%20')
     return quoteDone
   }
